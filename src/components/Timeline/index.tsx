@@ -13,9 +13,9 @@ export default function Timeline({ title, data } : TimelineModel) {
     <TimelineContainer>
       <TimelineTitle>{ title }</TimelineTitle>
       <TimelineList>
-        { data.map(item => (
+        { data?.map(item => (
           <TimelineItem { ...item } />
-        )) }  
+        ))}
       </TimelineList>
     </TimelineContainer>
   );

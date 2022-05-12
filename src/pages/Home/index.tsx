@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Timeline from '../../components/Timeline';
+import useHome from '../../hooks/useHomeLaunches';
 
 import {
   AppContainer,
@@ -7,51 +8,23 @@ import {
 } from './styles';
 
 export default function Home() {
+  const { home, loading } = useHome();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <AppContainer>
-      <Header />
+      <Header nextLaunch={home?.nextLaunch} />
       <AppColumns>
         <Timeline
-          title="Timeline"
-          data={[
-            {
-              id: 1,
-              name: 'Launch 1',
-              date: '04 jun 2022',
-              hour: '22:30',
-              success: null,
-              patch: 'https://imgur.com/BrW201S.png',
-            },
-            {
-              id: 1,
-              name: 'Launch 1',
-              date: '04 jun 2022',
-              hour: '22:30',
-              success: null,
-              patch: 'https://imgur.com/BrW201S.png',
-            },
-          ]}
+          title="Upcoming Launches"
+          data={home?.upcomingLaunches}
         />
         <Timeline
-          title="Timeline"
-          data={[
-            {
-              id: 1,
-              name: 'Launch 1',
-              date: '04 jun 2022',
-              hour: '22:30',
-              success: true,
-              patch: null,
-            },
-            {
-              id: 1,
-              name: 'Launch 1',
-              date: '04 jun 2022',
-              hour: '22:30',
-              success: true,
-              patch: 'https://imgur.com/BrW201S.png',
-            },
-          ]}
+          title="Past Launches"
+          data={home?.pastLaunches}
         />
       </AppColumns>
     </AppContainer>

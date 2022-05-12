@@ -10,13 +10,14 @@ export const TimelineItemContainer = styled.li`
 
     top: 0;
     bottom: 0;
-    left: 105px;
+    left: 85px;
 
     background-color: rgba(255, 255, 255, 0.5);
   }
 
   position: relative;
   flex-grow: 1;
+  max-width: 512px;
 
   display: flex;
   flex-direction: row;
@@ -28,10 +29,10 @@ export const TimelineItemContainer = styled.li`
 `;
 
 export const TimelineItemDate = styled.p`
-  width: 80px;
+  width: 60px;
 
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 10px;
+  line-height: 15px;
   text-align: right; 
 
   margin-right: 12px;
@@ -71,13 +72,13 @@ export const TimelineItemPathDefault = styled.p`
 `;
 
 export const TimelineItemName = styled.h3`
-  width: calc(100% - 80px - 60px - 12px * 3 - 30px);
+  width: calc(100% - 60px - 60px - 12px * 3 - 30px);
 
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 17px;
 `;
 
 export const TimelineItemHour = styled.span`
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 10px;
+  line-height: 15px;
 `;
