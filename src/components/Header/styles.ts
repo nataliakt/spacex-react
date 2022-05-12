@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,6 +28,7 @@ export const HeaderText = styled.h1`
 
   font-size: 20px;
   line-height: 25px;
+  text-align: justify;
 
   color: #fff;
 `;

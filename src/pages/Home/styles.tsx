@@ -10,11 +10,18 @@ export const AppContainer = styled.div`
 `;
 
 export const AppColumns = styled.div`
+  align-self: stretch;
+
   display: flex;
+  flex-grow: 1;
+
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  height: 100%;
+  gap: 24px;
+
+  justify-content: space-between;
+
+  margin: 0 32px 32px;
+
   color: #fff;
 `;
